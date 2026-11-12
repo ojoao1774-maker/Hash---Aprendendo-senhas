@@ -13,6 +13,29 @@ $msg_erro = "";
 /*************   CODIFICAR A PARTIR DAQUI   *************/
 
 
+if ($_SERVER ["REQUEST_METHOD"] == "POST")
+    {
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        $cpf = $_POST["cpf"];
+        $telefone = $_POST["telefone"];
+        $senha = $_POST["senha"];
+        $hash_senha = password_hash($senha,PASSWORD_DEFAULT);
+        $sql = $conexao -> prepare ("INSERT INTO usuarios");
+    }
+/*
+Alecrim
+Alecrim dourado
+Que nasceu no campo 
+Sem ser semeado
+
+Alecrim
+Alecrim dourado 
+Que nasceu no campo
+Sem ser semeado
+*/
+
+
 ?>
 
 <div class="card" style="max-width: 500px; margin: 30px auto;">
